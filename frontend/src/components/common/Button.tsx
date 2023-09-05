@@ -1,4 +1,4 @@
-import { CommandBarButton, DefaultButton, IButtonProps, IButtonStyles, ICommandBarStyles } from "@fluentui/react";
+import { CommandBarButton, DefaultButton, HighContrastSelectorBlack, IButtonProps, IButtonStyles, ICommandBarStyles } from "@fluentui/react";
 
 interface ShareButtonProps extends IButtonProps {
     onClick: () => void;
@@ -10,11 +10,12 @@ export const ShareButton: React.FC<ShareButtonProps> = ({onClick}) => {
           width: 86,
           height: 32,
           borderRadius: 4,
-          background: 'radial-gradient(109.81% 107.82% at 100.1% 90.19%, #0F6CBD 33.63%, #2D87C3 70.31%, #8DDDD8 100%)',
+          background: 'black',//'radial-gradient(109.81% 107.82% at 100.1% 90.19%, #0F6CBD 33.63%, #2D87C3 70.31%, #8DDDD8 100%)',
         //   position: 'absolute',
         //   right: 20,
           padding: '5px 12px',
-          marginRight: '20px'
+          marginRight: '20px',
+          fontFamily: 'Proxima Nova'
         },
         icon: {
           color: '#FFFFFF',
@@ -50,6 +51,7 @@ export const HistoryButton: React.FC<HistoryButtonProps> = ({onClick, text}) => 
         root: {
             width: '180px',
             border: `1px solid #D1D1D1`,
+            fontFamily: 'Proxima Nova'
           },
           rootHovered: {
             border: `1px solid #D1D1D1`,
