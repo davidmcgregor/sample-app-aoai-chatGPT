@@ -8,7 +8,7 @@ import rehypeRaw from "rehype-raw";
 import uuid from 'react-uuid';
 
 import styles from "./Chat.module.css";
-import Azure from "../../assets/Azure.svg";
+import Planit from "../../assets/Planit_Landscape.png"
 
 import {
     ChatMessage,
@@ -534,12 +534,17 @@ const Chat = () => {
                         {!messages || messages.length < 1 ? (
                             <Stack className={styles.chatEmptyState}>
                                 <img
-                                    src={Azure}
+                                    src={Planit}
                                     className={styles.chatIcon}
                                     aria-hidden="true"
                                 />
                                 <h1 className={styles.chatEmptyStateTitle}>Start chatting</h1>
-                                <h2 className={styles.chatEmptyStateSubtitle}>This chatbot is configured to answer your questions</h2>
+                                <h2 className={styles.chatEmptyStateSubtitle}>Planit Amplify is configured to answer your questions for the following:</h2>
+                                <ul>
+                                    <li>Test Case Generation</li>
+                                    <li>Requirements elaboration</li>
+                                    <li>Automated Test Script Creation</li>
+                                </ul>
                             </Stack>
                         ) : (
                             <div className={styles.chatMessageStream} style={{ marginBottom: isLoading ? "40px" : "0px"}} role="log">
